@@ -1,5 +1,5 @@
 import express from 'express'
-import dataBaseConnect from './db'
+import dataBaseConnect from './db.js'
 
 dataBaseConnect();
 const app = express();
