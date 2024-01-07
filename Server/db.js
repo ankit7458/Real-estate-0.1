@@ -4,7 +4,7 @@ dotenv.config();
 
 // const Url = process.env.DBURL
 
-const Url = "mongodb://localhost:27017/"
+const Url = "mongodb://localhost:27017/RealState"
 
 
 const dataBaseConnect = () => {
