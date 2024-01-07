@@ -2,7 +2,9 @@ import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 dotenv.config();
 
-const Url = process.env.DBURL
+// const Url = process.env.DBURL
+
+const Url = "mongodb://localhost:27017/"
 
 
 const dataBaseConnect = () => {

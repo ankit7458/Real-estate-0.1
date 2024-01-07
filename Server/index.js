@@ -6,7 +6,7 @@ dataBaseConnect();
 const app = express();
 
 
-app.get('/api/user',userRouter)
+app.use('/api/user',userRouter)
 
 
 app.listen(3000, () => {
