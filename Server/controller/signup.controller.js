@@ -1,7 +1,7 @@
 import User from '../models/User.model.js'
 import bcrypt from 'bcryptjs'
 
-export const signup = async (req, res) => {
+export const signup = async (req, res, next) => {
     // console.log(req.body)
     res.send(req.body)
 
@@ -9,7 +9,11 @@ export const signup = async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashPass = await bcrypt.hash(password, salt)
 
-    let user = await User.create({
-        username, email, password : hashPass
-    })
-}
+    try {
+        let user = await User.create({
+            username, email, password : hashPass
+        })
+    } catch (error) {
+        next(error)
+    }
+} 
