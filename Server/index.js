@@ -2,6 +2,7 @@ import express from 'express'
 import dataBaseConnect from './db.js'
 import userRouter from './routes/user.route.js'
 import signupRouter from './routes/auth.route.js'
+import 'dotenv/config'
 
 dataBaseConnect();
 const app = express();
